@@ -1,0 +1,179 @@
+/* Overall Styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #f7f8fc, #e3e4e8); /* Soft neutral gradient */
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Section - Fixed at the Top */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E4F3FC; /* Clean white header */
+  padding: 20px;
+  border-bottom: 1px solid #dcdfe6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.header .logo {
+  height: 70px;
+  margin-right: 15px;
+}
+
+.header .title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* Task Container */
+.container {
+  margin-top: 100px; /* Push content below the header */
+  width: 90%;
+  max-width: 600px;
+  background-color: #ffffff; /* White background for cards */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+}
+
+/* Input Field and Button */
+.task-input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #dcdfe6;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s ease-in-out;
+  background: #f9fafb;
+}
+
+#taskInput:focus {
+  border-color: #3a86ff; /* Soft blue focus effect */
+  box-shadow: 0 0 8px rgba(58, 134, 255, 0.2);
+}
+
+#addTaskButton {
+  background: linear-gradient(to right, #3a86ff, #46cdfb); /* Professional gradient button */
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  margin-left: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+#addTaskButton:hover {
+  background: linear-gradient(to right, #46cdfb, #3a86ff); /* Inverted gradient on hover */
+  box-shadow: 0 4px 8px rgba(58, 134, 255, 0.2);
+}
+
+/* Task List */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9fafb;
+  color: #333;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #dcdfe6;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-item:hover {
+  background-color: #eef3fa;
+  transform: scale(1.02);
+}
+
+.task-item.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+  color: #888;
+}
+
+.checkbox {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  accent-color: #3a86ff; /* Custom checkbox color */
+  cursor: pointer;
+}
+
+.task-name {
+  flex: 1;
+  font-size: 16px;
+}
+
+.task-date {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.action-buttons button {
+  background: #ffffff; /* Neutral button background */
+  color: #3a86ff;
+  border: 1px solid #dcdfe6;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.action-buttons button:hover {
+  background: #3a86ff;
+  color: #fff;
+  border-color: #3a86ff;
+  box-shadow: 0 2px 6px rgba(58, 134, 255, 0.2);
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #555;
+  background: #f7f8fc;
+  width: 100%;
+  border-top: 1px solid #dcdfe6;
+}
